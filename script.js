@@ -1,7 +1,2 @@
-function myfunc(){
-    let x, y, z
-    x = 5
-    y = 8
-    z = x + y
-    alert(z)
-}
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");

@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
-    <div> 
-        <h1> Todo List</h1>
-        <button onclick="myfunc()">Add Task</button>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add Some Text">
+                <button>Add</button>
+            </div>
+
+            <ul id="list-container">
+                
+            </ul>
+        </div>
     </div>
+    
 </body>
 </html>
