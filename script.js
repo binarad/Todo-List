@@ -1,7 +1,13 @@
-const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("list-container");
+const inputBox = document.querySelector("#input-box");
+const listContainer = document.querySelector("#list-container");
 
-function myFunc() {
-    let text = document.getElementById("title").innerHTML;
-    document.getElementById("title").innerHTML = text.toUpperCase();
+function addtask(){
+    if(inputBox.value == ''){
+        alert("You must write something!");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerText = inputBox.value;
+        listContainer.appendChild(li);
+    }
 }
