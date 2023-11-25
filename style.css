@@ -8,17 +8,76 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #651577, #490b9f );
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .todo-app {
     width: 100%;
     max-width: 540px;
-    background: #fff;
+    background-image: url(https://w0.peakpx.com/wallpaper/95/65/HD-wallpaper-shrek-face-51300-px-shrek-meme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: 100px, auto, 20px;
     padding: 40px, 30px, 70px;
+    border-radius: 10px;
 }
 
-#list-container {
-    text-decoration: none;
+#title {
+    text-align: center;
+    font-size: 30px;
+    font-weight:lighter;
+}
+
+#todo-list {
+    display: flex;
     list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.task{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50px;
+    width: 60%;
+
+}
+
+.task button, label{
+    margin: 10px;
+}
+
+.check {
+    width: 15px;
+}
+
+.del {
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#input-box {
+    width:300px ;
+    height: 25px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.row button {
+    height: 25px;
+    margin: 5px;
+    width: 50px;
+    border-radius: 10px;
 }
