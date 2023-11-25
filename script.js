@@ -6,7 +6,7 @@ if(inputBox.value === "") {
 }
 
 let taskList = document.getElementById("todo-list");
-let taskItem = document.createElement("div")
+let taskItem = document.createElement("li")
 taskItem.className = 'task';
 
 let checkbox = document.createElement("input")

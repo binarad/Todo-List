@@ -32,10 +32,9 @@
 }
 
 #todo-list {
-    display: flex;
     list-style: none;
     justify-content: center;
-    align-items: center;
+    
 }
 
 .task{
@@ -44,8 +43,10 @@
     background-color: white;
     border-radius: 50px;
     width: 60%;
-
-}
+    margin: 10px;
+    position: relative;
+    left: 50px;
+}   
 
 .task button, label{
     margin: 10px;
@@ -53,6 +54,7 @@
 
 .check {
     width: 15px;
+
 }
 
 .del {
