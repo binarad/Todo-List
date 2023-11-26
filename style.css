@@ -39,22 +39,29 @@
 
 .task{
     display: flex;
-    justify-content: center;
     background-color: white;
     border-radius: 50px;
     width: 60%;
     margin: 10px;
     position: relative;
     left: 50px;
+    justify-content: space-between;
 }   
 
-.task button, label{
+.task button{
     margin: 10px;
 }
 
+.task label{
+    align-self: center;
+}
+
+
+.check, .task label, .del {
+}
 .check {
     width: 15px;
-
+    margin: 10px;
 }
 
 .del {

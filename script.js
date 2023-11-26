@@ -20,7 +20,7 @@ function addTask(){
     taskLabel.textContent = inputBox.value;
 
     let deleteButton = document.createElement("button");
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'DEL'
     deleteButton.className = 'del';
     deleteButton.addEventListener('click', function(){
         deleteTask(taskItem);
