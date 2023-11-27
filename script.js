@@ -70,12 +70,12 @@ function editTask(taskLabel) {
     saveData()
 }
 
-function saveData(){
-    localStorage.setItem("data", taskLabel)
+function saveData(taskList){
+    localStorage.setItem("data", taskList)
 }
 
-function showTask() {
-    taskLabel.value = localStorage.getItem("data");
+function showTask(taskList) {
+    taskList = localStorage.getItem("data");
 }
 
 showTask();
