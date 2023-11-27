@@ -33,40 +33,75 @@
 
 #todo-list {
     list-style: none;
+    display: block;
     justify-content: center;
-    
+
 }
 
 .task{
     display: flex;
     background-color: white;
-    border-radius: 50px;
-    width: 60%;
+    border-radius: 15px;
     margin: 10px;
+    width: 80%;
     position: relative;
     left: 50px;
     justify-content: space-between;
+    align-items: center;
+    height: auto;
 }   
 
-.task button{
-    margin: 10px;
-}
 
 .task label{
     align-self: center;
+    max-width: 200px;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    overflow-wrap: break-word;
 }
 
-
-.check, .task label, .del {
-}
 .check {
     width: 15px;
-    margin: 10px;
+    margin: 10px 10px 10px 20px;
+    cursor: pointer;
 }
 
 .del {
     background-color: rgb(236, 71, 71);
-    border-radius: 5px;
+    margin: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    border-style: none;
+    width: 50px;
+    height: 25px;
+    font-weight: bold;
+    background-image: url(https://cdn.iconscout.com/icon/free/png-256/free-delete-2902143-2411575.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.del:hover {
+    background-color: red;
+}
+
+.edit {
+    margin: 10px 20px 10px 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    background-image: url(https://cdn-icons-png.flaticon.com/256/1159/1159633.png);
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    border-style: none;
+    background-color: white;
+}
+
+.edit:hover{
+    background-color: #a1a1a1;
 }
 
 .row {
@@ -89,4 +124,5 @@
     margin: 5px;
     width: 50px;
     border-radius: 10px;
+    cursor: pointer;
 }

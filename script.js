@@ -6,7 +6,7 @@ function addTask(){
     }
 
     let taskList = document.getElementById("todo-list");
-    let taskItem = document.createElement("li")
+    let taskItem = document.createElement("div")
     taskItem.className = 'task';
 
     let checkbox = document.createElement("input")
@@ -20,14 +20,14 @@ function addTask(){
     taskLabel.textContent = inputBox.value;
 
     let deleteButton = document.createElement("button");
-    deleteButton.textContent = 'DEL'
+    deleteButton.textContent = ''
     deleteButton.className = 'del';
     deleteButton.addEventListener('click', function(){
         deleteTask(taskItem);
     })
 
     let editButton = document.createElement('button')
-		editButton.textContent = 'Edit'
+		editButton.textContent = ''
 		editButton.className = 'edit'
 		editButton.addEventListener('click', function () {
 			editTask(taskLabel)
