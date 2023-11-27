@@ -42,6 +42,8 @@ function addTask(){
     taskList.appendChild(taskItem);
 
     inputBox.value = '';
+    saveData();
+
 }
 function toggleTaskCompletion(checkbox) {
     let taskLabel = checkbox.nextElementSibling;
@@ -51,11 +53,13 @@ function toggleTaskCompletion(checkbox) {
     else {
         taskLabel.style.textDecoration = 'none';
     }
+    saveData();
 }
 
 function deleteTask(taskItem) {
     let taskList = document.getElementById("todo-list");
     taskList.removeChild(taskItem);
+    saveData();
 }
 
 function editTask(taskLabel) {
@@ -63,4 +67,15 @@ function editTask(taskLabel) {
     if(newText != null){
         taskLabel.textContent = newText;
     }
+    saveData()
 }
+
+function saveData(){
+    localStorage.setItem("data", taskLabel)
+}
+
+function showTask() {
+    taskLabel.value = localStorage.getItem("data");
+}
+
+showTask();

@@ -115,7 +115,7 @@
 #input-box {
     width:300px ;
     height: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px;
     border-style: none;
 }
@@ -134,3 +134,12 @@
     background-color: white;
     cursor: pointer;
 }
+
+.row button:hover{
+    background-color: #a1a1a1;
+}
+
+#input-box::placeholder {
+    text-align: center;
+}
+
