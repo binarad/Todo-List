@@ -35,7 +35,7 @@
     list-style: none;
     display: block;
     justify-content: center;
-
+    
 }
 
 .task{
@@ -117,6 +117,7 @@
     height: 25px;
     border-radius: 10px;
     margin: 5px;
+    border-style: none;
 }
 
 .row button {
@@ -124,5 +125,12 @@
     margin: 5px;
     width: 50px;
     border-radius: 10px;
+    cursor: pointer;
+    background-image: url(https://www.freepnglogos.com/uploads/plus-icon/add-plus-icon-28.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    border-style: none;
+    background-color: white;
     cursor: pointer;
 }
