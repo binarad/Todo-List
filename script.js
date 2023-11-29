@@ -1,9 +1,5 @@
 const inputBox = document.querySelector("#input-box");
-function addTask(){
-    if(inputBox.value === "") {
-        alert("Please write the task!")
-        return;
-    }
+function addTask(text, done){
 
     let taskList = document.getElementById("todo-list");
     let taskItem = document.createElement("div")
@@ -12,12 +8,13 @@ function addTask(){
     let checkbox = document.createElement("input")
     checkbox.type = 'checkbox';
     checkbox.className ='check'
+    checkbox.checked = done;
     checkbox.addEventListener('change', function(){
         toggleTaskCompletion(this);
     })
 
     let taskLabel = document.createElement('label');
-    taskLabel.textContent = inputBox.value;
+    taskLabel.textContent = text;
 
     let deleteButton = document.createElement("button");
     deleteButton.textContent = ''
@@ -40,10 +37,7 @@ function addTask(){
     taskItem.appendChild(editButton);
 
     taskList.appendChild(taskItem);
-
-    inputBox.value = '';
-    saveData();
-
+    
 }
 function toggleTaskCompletion(checkbox) {
     let taskLabel = checkbox.nextElementSibling;
@@ -74,8 +68,24 @@ function saveData(){
     localStorage.setItem("data", taskLabel)
 }
 
-function showTask() {
-    taskLabel.value = localStorage.getItem("data");
+function prepareTasks() {
+    let tasks = localStorage.getItem("data");
+    if (!tasks){
+        return;
+    }
+    tasks.forEach(task => {
+       addTask(task.text, task.done); 
+    });
 }
 
-showTask();
+function createTask(){
+    if (inputBox.value === '') {
+			alert('Please write the task!')
+			return
+		}
+    addTask(inputBox.value, false)
+    inputBox.value = ''
+	saveData()
+}
+
+window.onload =()=>{prepareTasks()}
