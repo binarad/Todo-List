@@ -64,8 +64,8 @@ function editTask(taskLabel) {
     saveData()
 }
 
-function saveData(){
-    localStorage.setItem("data", taskLabel)
+function saveData(taskList){
+    localStorage.setItem("data", taskList)
 }
 
 function prepareTasks() {
